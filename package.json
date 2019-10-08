@@ -1,0 +1,25 @@
+{
+  "name": "nodemailer-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./src/server.js --legacy-watch "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@types/dotenv": "^6.1.0",
+    "@babel/cli": "^7.0.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.15.1",
+    "nodemon": "^1.18.10",
+    "@babel/node": "^7.5.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
