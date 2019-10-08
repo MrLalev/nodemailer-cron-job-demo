@@ -1,6 +1,6 @@
 # nodemailer-demo
 
-*Nodemailier demo application for testing purposes*
+*Nodemailer demo application for testing purposes*
 
 ## Environment setup and configuration:
 - nodeJs v10.7.0
