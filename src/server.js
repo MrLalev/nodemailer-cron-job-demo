@@ -9,7 +9,7 @@ const cron_job = schedule.scheduleJob('00 00 11 * * 0-6', function () {
     <table style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">
       <tr>
         <th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">Host</th>
-        <th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">Is Alive</th>
+        <th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">Alive</th>
         <th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">Time</th>
         <th style="border: 1px solid #ddd;padding: 8px;padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">Output</th>
       </tr>
@@ -51,9 +51,11 @@ async function sendNotification(report) {
     const info = await transporter.sendMail({
       from: `${process.env.SENDER_NAME} <${process.env.SENDER_EMAIL}>`,
       to: `${process.env.SEND_TO}`,
-      subject: `Health check report ${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()} 👻`,
+      subject: `Health check report ${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`,
       html: report
     });
+
+    console.log( `Health check report ${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()} was send.`);
   }
 }
 
