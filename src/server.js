@@ -4,7 +4,7 @@ const ping = require('ping');
 const hosts = process.env.HOSTS.split(',');
 const nodemailer = require('nodemailer');
 
-const cron_job = schedule.scheduleJob('00 00 11 * * 0-6', function () {
+const cron_job = schedule.scheduleJob('00 00 07 * * 0-6', function () {
   let report = `
     <table style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">
       <tr>
